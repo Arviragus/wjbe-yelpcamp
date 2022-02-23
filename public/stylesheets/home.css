@@ -1,0 +1,68 @@
+body {
+   height: 100vh;
+   font-family: 'Heebo', sans-serif;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+   url("https://images.unsplash.com/photo-1511993807578-701168605ad3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80");
+   background-size: cover;
+   background-position: center;
+   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+   color: rgb(230, 230, 230);
+   font-weight:700;
+   font-size: 45px;
+}
+
+footer {
+   color: rgb(255, 255, 255);
+}
+
+.logo {
+   width: 250px;
+   border-right: 5px solid rgb(230, 230, 230);
+}
+
+.cover-container {
+   max-width: 100vw;
+}
+
+.lead {
+   font-size: 25px;
+   color: rgb(230, 230, 230);
+}
+
+.nav-link {
+   padding: 0.25rem 0;
+   font-weight: 700;
+   font-size: 30px;
+   color: rgba(216, 216, 216, 0.876);
+   margin-left: 1.5rem;
+   border-bottom: 0.25rem solid transparent;
+   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.nav-link:hover {
+   color: rgb(96, 167, 120);
+   border-bottom: 0.15rem solid rgba(43, 155, 76, 0.75);
+   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-secondary {
+   color: rgb(221, 221, 221);
+   text-shadow: none;
+   background-color: rgb(43, 155, 77);
+   border: 1px solid rgb(24, 122, 61);
+}
+
+.btn-secondary:hover {
+   color: rgb(221, 221, 221);
+   text-shadow: none;
+   background-color: rgb(15, 102, 41);
+   border: 1px solid rgba(37, 214, 87, 0);
+}
+
+.campgroundGo {
+   font-size: 20px;
+   padding: 10px 15px;
+}
