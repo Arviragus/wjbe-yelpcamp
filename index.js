@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== "production") {
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const ejsMate = require('ejs-mate');
 const methodOverride = require('method-override');
 const engine = require('ejs-mate');
 const ExpressError = require('./utils/ExpressError');
@@ -18,7 +19,9 @@ const User = require('./models/user');
 
 // deployable mongo:
 const MongoDBStore = require("connect-mongo")(session);
+
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+
 mongoose.connect(dbUrl, {
    useNewUrlParser: true,
    useUnifiedTopology: true,
@@ -53,12 +56,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(mongoSanitize());
+app.use(mongoSanitize({
+   replaceWith: '_'
+}))
 
-const secret = process.env.SECRET || 'thisisnotasecret';
+const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
 
 const store = new MongoDBStore({
-   mongoUrl: dbUrl,
+   url: dbUrl,
    secret,
    touchAfter: 24 * 60 * 60
 })
@@ -69,16 +74,16 @@ store.on("error", function (e) {
 
 const sessionConfig = {
    store,
-    name: 'session',
-    secret,
-    resave: false,
-    saveUninitialized: true,
-    cookie: {
-       httpOnly: true,
-      //  secure: true,
-       expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-       maxAge: 1000 * 60 * 60 * 24 * 7
-    }
+   name: 'session',
+   secret,
+   resave: false,
+   saveUninitialized: true,
+   cookie: {
+      httpOnly: true,
+     //  secure: true,
+      expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+      maxAge: 1000 * 60 * 60 * 24 * 7
+   }
 }
 
 // cookies and flash
