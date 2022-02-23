@@ -58,7 +58,7 @@ app.use(mongoSanitize());
 const secret = process.env.SECRET || 'thisisnotasecret';
 
 const store = new MongoDBStore({
-   url: dbUrl,
+   mongoUrl: dbUrl,
    secret,
    touchAfter: 24 * 60 * 60
 })
