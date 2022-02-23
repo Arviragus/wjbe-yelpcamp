@@ -172,8 +172,9 @@ app.use((err, req, res, next) => {
 })
 
 // set up port listener with auto-message on update via nodemon
-app.listen(3000, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
     console.log('Updating...')
     console.log('CONNECTED!')
-    console.log('Serving on Port: 3000')
+    console.log(`Serving on Port: ${port}`)
 })
