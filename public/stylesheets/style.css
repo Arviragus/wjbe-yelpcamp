@@ -1,16 +1,89 @@
 body {
-   font-family: 'Heebo', sans-serif;
-   background-color: rgb(91, 133, 85);
+    height: 100vh;
+    font-family: 'Heebo', sans-serif;
+}
+
+.logo {
+    color: rgb(76, 168, 98);
+    width: 235px;
+    font-size: 45px;
+    font-weight: 700;
+    padding-left: 5px;
+    margin-right: 20px;
+    border-right: 5px solid rgb(119, 119, 119);
+}
+
+.navbar-brand {
+   font-size: 45px;
+   padding-left: 5px;
+   padding-right: 20px;
+   padding-top: 10px;
+}
+
+.navbar {
+   color: black;
+   background-color: rgba(255, 255, 255, 0);
+   font-size: 30px;
+   padding-top: 20px;
+}
+
+a.nav-link:hover {
+    border-bottom: 0.15rem solid rgba(43, 155, 76, 0.75);
+}
+
+.bg-light {
+    background-color: white !important;
+}
+
+.bg-dark {
+    --bs-bg-opacity: 0;
+}
+
+.nav-link {
+    font-weight: 700;
+    font-size: 30px;
+    padding-top: 15px;
+    margin-left: 0.5rem;
+    border-bottom: 0.25rem solid transparent;
+    color: grey
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(96, 167, 120);
+    border-bottom: 0.15rem solid rgba(43, 155, 76, 0.75);
+}
+
+.navbar-toggler {
+    border: 1px solid grey;
+}
+
+.navbar-toggler-icon {
+    color: grey;
 }
 
 .card {
    width: 30rem;
 }
 
-#cluster-map {
-   width: 100%;
-   height: 400px;
+.footer {
+    color: grey;
+    font-size: 25px;
+    font-weight: 700;
 }
+
+.copyrighter {
+    color: grey;
+}
+
+/* #cluster-map {
+    position: relative;
+    width: 100%;
+    height: 400px;
+} */
+
+/* #allcamps {
+    display: absolute;
+} */
 
 #map {
    width: 100%;

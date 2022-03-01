@@ -1,15 +1,14 @@
-<% layout('./layouts/boilerplate') %>
+<% layout('./layouts/mainboilerplate') %>
+<link rel="stylesheet" href="/stylesheets/showpagestyles.css">
 
-<div id="cluster-map" class="mb-4"></div>
+<!-- <div id="cluster-map" class="mb-3"></div> -->
 
-<h1 class="mb-3">All Campgrounds</h1>
-
-<a href="/campgrounds/new">
-    <button class="btn btn-success mb-3">Add a Campground</button>
-</a>
+<div class="container">
+    <h4 class="mt-2 mb-4 text-center">Discover over 200+ campsites across the United States.</h3>
+</div>
 
 <% for (let campground of campgrounds) { %>
-<div class="card mb-3">
+<div class="card mb-3" id="campgroundcard">
     <div class="row">
         <div class="col-md-4">
            <% if(campground.images.length) { %>
@@ -25,7 +24,7 @@
             <h5 class="card-title"><%= campground.popupMarkup %></h5>
             <p class="text-muted"><%= campground.location %> - $<%= campground.price %> </p>
             <p class="card-text"><%= campground.description %> </p>
-            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">View Campsite</a>
+            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary mt-3">View Campsite</a>
         </div>
     </div>
 </div>

@@ -2,10 +2,10 @@
 <link rel="stylesheet" href="/stylesheets/stars.css">
 
 <!-- the main card -->
-<div class="row">
-   <div class="col-6">
+<div class="row campcardrow">
+   <div class="col-6 campcardcol">
 
-      <div class="card-body">
+      <div class="card-body campcardbody">
          <h1 class="text-center"><%= campground.title %></h1>
          <h4 class="text-center text-muted"><%= campground.location %></h4>
          <p class="text-center mb-1">by <%= campground.author.username %> </p>
@@ -126,11 +126,6 @@
       <% } %>
    </div>
 
-   <!-- last update element -->
-   <div class="card-footer text-muted mt-4 mb-3 text-center"
-      style="font-size: small; background-color: white; padding: none">
-      last updated: 2 days ago
-   </div>
 </div>
 
 <script>

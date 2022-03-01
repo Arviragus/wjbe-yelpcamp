@@ -1,0 +1,13 @@
+#campgroundcard {
+    width: 100%;
+}
+
+.card-text {
+    overflow: hidden;
+    width: 95%;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

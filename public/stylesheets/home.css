@@ -51,14 +51,14 @@ footer {
 .btn-secondary {
    color: rgb(221, 221, 221);
    text-shadow: none;
-   background-color: rgb(43, 155, 77);
+   background-color: rgb(15, 102, 41);
    border: 1px solid rgb(24, 122, 61);
 }
 
 .btn-secondary:hover {
    color: rgb(221, 221, 221);
    text-shadow: none;
-   background-color: rgb(15, 102, 41);
+   background-color: rgb(62, 149, 91);
    border: 1px solid rgba(37, 214, 87, 0);
 }
 
